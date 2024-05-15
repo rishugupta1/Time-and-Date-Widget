@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-shadow: border-box; /* This line has an error, it should be 'box-sizing: border-box;' */
+    font-family: sans-serif;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 35.87em;
+    display: grid;
+    color: aliceblue;
+    align-items: center;
+    grid-template-columns: 8fr 4fr;
+    background-color: skyblue;
+    border-radius: 0.5em;
+    animation: neon-glow; /* Corrected the property name 'animation' */
+}
+
+.clock-container {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 3.75em;
+    margin-left: 0.2em;
+    border-radius: 0.1em;
+    padding: 0.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock-container span {
+    width: 120px;
+    display: inline-block;
+    text-align: center;
+}
+
+.hours {
+    color: red;
+}
+
+.minutes {
+    color: greenyellow;
+}
+
+.seconds {
+    color: blue;
+}
+
+@keyframes neon-glow {
+    0% {
+        box-shadow: 0 0 5px white, 0 0 20px white; /* Removed the commas */
+    }
+    100% {
+        box-shadow: 0 0 20px white, 0 0 40px white; /* Removed the commas */
+    }
+}
+
+.data-container {
+    padding: 10px;
+    background-color: skyblue;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.data-container span {
+    font-size: 2.5em;
+}
